@@ -1,0 +1,30 @@
+WEB-INF目录结构
+    WEM-INF是java的WEB应用的安全目录,所谓安全就是客户端无法访问,只有服务端可以访问
+    web.xml,项目部署文件 项目的配置信息 如项目的欢迎页面 进入项目的根目录时的第一个界面
+    classes文件,用已放置*.class文件
+    lib文件夹,用于存放需要的jar包
+   
+   
+   
+
+MyEclipse Web项目结构
+    顶层:项目名字 
+    src:java源程序
+    librares:类库
+    WebRoot:项目根目录
+    index.jsp资源文件
+    META-INF:项目描述目录
+    WEB-INF:项目配置目录
+    
+    1. JSP全名为Java Server Pages,其根本就是一个简化的servlet设计,他实现了在Java当中使用HTML标签,
+    Jsp是一种动态网页技术标准也是JavaEE标准,JSP与servlet一样是在服务器端执行的
+    
+    
+ jsp页面的生命周期：
+    1.用户发出请求index.jsp
+    2.判断是否是第一次请求，如果是第一个请求则jsp引擎将jsp文件转化为一个servlet类，生成字节码文件，并执行jspInit()方法   每次修改jsp会重新编译，生成新的字节码文件
+    3.如果不是第一次请求则直接找到生成的字节码文件解释执行jspService()方法
+    jspService()方法被调用来处理客户端请求.对每一个请求,JSP引擎创建一个新的线程来处理该请求.由于该Servlet常驻于内存里，所以响应速度非常快。
+    
+    内置对象
+	JSP内置对象是Web容器创建的一组对象，已经声明过了
